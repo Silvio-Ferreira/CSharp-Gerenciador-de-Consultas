@@ -1,0 +1,50 @@
+@model Consultas.Models.Consulta;
+
+@{
+    ViewData ["Title"] = "Deletar consulta";
+}
+
+<h1 style="color: black;">Deseja realmente deletar este contato?  Está operação é irreversível!</h1>
+
+</hr>
+<div>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Nome)
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(x => x.Nome)
+        </dt>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Telefone)
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(x => x.Telefone)
+        </dt>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Profissional)
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(x => x.Profissional)
+        </dt>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Data)
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(x => x.Data)
+        </dt>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Sintomas)
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(x => x.Sintomas)
+        </dt>
+    </dl>
+</div>
+
+<form asp-action="Deletar">
+    <input type="submit" value="Deletar" class="btn btn-danger"/>
+</form>
+
+<br>
+<a asp-action="Index">Voltar</a>
